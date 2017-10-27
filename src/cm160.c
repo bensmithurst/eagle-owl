@@ -71,7 +71,7 @@ static void process_live_data(struct record_data *rec)
   else
     _watts = w;
 
-  FILE *fp =  fopen(".live", "w");
+  FILE *fp =  fopen(".live", "a");
   if(fp)
   {
     if(rec->hour!=255) // to avoid writing strange values (i.e. date 2255, hour 255:255) that sometimes I got
